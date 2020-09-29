@@ -128,7 +128,7 @@ void updatePH() {
   //  doc["pH"]   = String(pHdata, 2);
 
   //doc["B"] = String(battery_voltage, 2);
-  doc["A"]  = ADCvalue;
+  doc["pH"]  = String(pHdata, 2);
   serializeJson(doc, JsonBLEData);
   Serial.println(JsonBLEData);
 
@@ -261,7 +261,7 @@ void setup() {
 //  Serial.println(deviceName);
 
   // Create the BLE Device
-  BLEDevice::init("pH-002");
+  BLEDevice::init("pH-001");
 
   // Create the BLE Server
   pServer = BLEDevice::createServer();
