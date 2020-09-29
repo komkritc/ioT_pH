@@ -1,3 +1,3 @@
 
 * this project is about iot-ph
-* git commit -am "update pH as output" => sync in vscode
+* git commit -am "_add note here_" => sync in vscode
