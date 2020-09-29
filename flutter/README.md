@@ -1,3 +1,2 @@
-# Flutter COVID-19 Dashboard UI | Speed Code
+# Flutter Mobile APP
 
-[YouTube Video](https://youtu.be/krU-ASLb8lM)
