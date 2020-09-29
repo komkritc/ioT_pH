@@ -1,6 +1,5 @@
 
-// ioT-PH-Meter @komkrit OCtober/2020
-
+// PH meter @komkrit 9/2020
 #include <EEPROM.h>
 #include "EEPROMAnything.h"
 
@@ -13,7 +12,7 @@
 #include <BlynkSimpleEsp32.h>
 #include <Adafruit_ADS1015.h>
 #include <ArduinoJson.h>
-#include <movingAvg.h>
+
 #include <TFT_eSPI.h>
 #include <SPI.h>
 #include "WiFi.h"
@@ -28,7 +27,7 @@
 #define BUTTON_2            0
 
 Adafruit_ADS1115 ads;
-movingAvg phReading(32);
+
 
 TFT_eSPI tft = TFT_eSPI(135, 240); // Invoke custom library
 Button2 btn1(BUTTON_1);
@@ -114,7 +113,11 @@ void espDelay(int ms)
 
 void updatePH() {
   float multiplier = 0.0625F;
-  int16_t results = phReading.reading(ads.readADC_Differential_0_1());
+  //int16_t results = phReading.reading(ads.readADC_Differential_0_1());
+  
+  int16_t results = ads.readADC_Differential_0_1();      
+  Serial.print("Differential: "); Serial.print(results); Serial.print("("); Serial.print(results * multiplier); Serial.println("mV)");
+
   ADCvalue = String((results * multiplier), 3); //mV
   //pHdata = -0.0226 * ADCvalue.toFloat() + 7.0752;
   pHdata = A * ADCvalue.toFloat() + B;
@@ -128,7 +131,7 @@ void updatePH() {
   //  doc["pH"]   = String(pHdata, 2);
 
   //doc["B"] = String(battery_voltage, 2);
-  doc["pH"]  = String(pHdata, 2);
+  doc["pH"]  = String(pHdata,2);
   serializeJson(doc, JsonBLEData);
   Serial.println(JsonBLEData);
 
@@ -233,7 +236,6 @@ void setup() {
   // ads.setGain(GAIN_EIGHT);      // 8x gain   +/- 0.512V  1 bit = 0.015625mV
   // ads.setGain(GAIN_SIXTEEN);    // 16x gain  +/- 0.256V  1 bit = 0.0078125mV
   ads.begin();
-  phReading.begin();
 
   tft.init();
   tft.setRotation(1);
@@ -261,7 +263,7 @@ void setup() {
 //  Serial.println(deviceName);
 
   // Create the BLE Device
-  BLEDevice::init("pH-001");
+  BLEDevice::init("pH-002");
 
   // Create the BLE Server
   pServer = BLEDevice::createServer();
