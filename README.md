@@ -1,3 +1,3 @@
 
 * this project is about iot-ph
-* git commit -m "update pH as output"
+* git commit -am "update pH as output"
