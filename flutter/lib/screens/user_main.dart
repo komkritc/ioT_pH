@@ -93,6 +93,8 @@ class _UserMainState extends State<UserMain>
           scanSubScription.cancel(); // ?
           stopScan();
 
+          flutterBlue.stopScan(); //komkritc
+
           connectionText = "connecting";
         }
       }, onDone: () {
