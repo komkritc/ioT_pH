@@ -4,6 +4,7 @@
 
 #include <EEPROM.h>
 #include "EEPROMAnything.h"
+//#include <math.h>
 
 #include <BLEDevice.h>
 #include <BLEServer.h>
@@ -184,7 +185,7 @@ void button_init()
     tft.fillScreen(TFT_BLACK);
     tft.setTextColor(TFT_GREEN, TFT_BLACK);
     tft.setTextDatum(MC_DATUM);
-    tft.drawString("Going to SLEEP Mode", tft.width() / 2, tft.height() / 2);
+    tft.drawString("Enter to SLEEP Mode", tft.width() / 2, tft.height() / 2);
     //tft.drawString("Press again to wake up",  tft.width() / 2, tft.height() / 2 );
     espDelay(6000);
     digitalWrite(TFT_BL, !r);
@@ -216,7 +217,7 @@ void button_loop()
   btn2.loop();
 }
 
-void M3Senddata()
+void bleSendNotify()
 {
   if (deviceConnected)
   {
@@ -256,6 +257,9 @@ void setup()
   EEPROM.begin(64);
   EEPROM_readAnything(10, A);
   EEPROM_readAnything(20, B);
+  // {"A":-0.0226,"B":7.0752}
+  if(isnan(A)) {A=-0.0226;};
+  if(isnan(B)) {B=7.0752;};
 
   Serial.println("ioT-PH-Meter by Dr.Komkrit Chooruang");
   Serial.println(A, 4);
@@ -320,7 +324,7 @@ void setup()
   BLEDevice::startAdvertising();
 
   Serial.println("Waiting a client connection to notify...");
-  timer.setInterval(5000L, M3Senddata);
+  timer.setInterval(5000L, bleSendNotify);
   timer.setInterval(3000L, updatePH);
   timer.setInterval(1000L, updateDisplay);
 }
