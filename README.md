@@ -3,5 +3,6 @@
 
 ## Android App
 
-<img src="https://github.com/komkritc/ioT_pH/blob/master/images/screen_1.png" width=250 align="left" />
-<img src="https://github.com/komkritc/ioT_pH/blob/master/images/screen_2.png" width=250 align="center" />
+<img src="https://github.com/komkritc/ioT_pH/blob/master/images/screen_1.png" width=220 align="left" />
+<img src="https://github.com/komkritc/ioT_pH/blob/master/images/screen_3.png" width=220 align="left" />
+<img src="https://github.com/komkritc/ioT_pH/blob/master/images/screen_2.png" width=220 align="left" />
