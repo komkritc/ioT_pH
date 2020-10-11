@@ -1,5 +1,8 @@
 
 // PH meter @komkrit 9/2020
+// git  add  "note_xx"
+// git  commit -m "note_xx"
+
 // qr code  => {"ID":"pH-20420","apikey":"dZs11hNvVA41o3RDzjA4yQ","A":"-0.0226","B":"7.0752"}
 
 #include <EEPROM.h>
