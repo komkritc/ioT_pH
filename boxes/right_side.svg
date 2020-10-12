@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="81.099998mm"
+   height="31.099998mm"
+   viewBox="0 0 81.099998 31.099998"
+   version="1.1"
+   id="svg4459"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="right_side.svg">
+  <defs
+     id="defs4453" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.3402581"
+     inkscape:cx="165.93686"
+     inkscape:cy="36.142376"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4456">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-73.59881,-73.652381)">
+    <path
+       d="m 76.64881,76.702381 v 3.5 h -3 v 6 h 3 v 6 h -3 v 6 h 3 v 3.499999 h 4.5 v 3 h 6 v -3 h 6 v 3 h 6 v -3 h 6 v 3 h 6 v -3 h 6 v 3 h 6 v -3 h 6 v 3 h 6 v -3 h 6 v 3 h 6 v -3 h 4.5 v -3.499999 h 3 v -6 h -3 v -6 h 3 v -6 h -3 v -3.5 h -4.5 v -3 h -6 v 3 h -6 v -3 h -6 v 3 l -0.0904,5.093575 v 0 0 0 0 L 99.190578,81.8821 v 0 0 l -0.04179,-5.179715 v -3 h -6 v 3 h -6 v -3 h -6 v 3 z"
+       id="bottom_outsideCutPath"
+       stroke="#FF0000"
+       stroke-width="0.1"
+       style="font-size:12px;fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.1;stroke-linecap:round"
+       vector-effect="non-scaling-stroke"
+       sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="31.1mm"
+   height="81.099998mm"
+   viewBox="0 0 31.1 81.099998"
+   version="1.1"
+   id="svg5638"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="3.svg">
+  <defs
+     id="defs5632" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.1691803"
+     inkscape:cx="68.75"
+     inkscape:cy="156.81336"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5635">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(401.08571,157.72262)">
+    <path
+       d="m -398.03571,-157.67262 v 7.5 h -3 v 6 h 3 v 6 h -3 v 6 h 3 v 6 h -3 v 6 h 3 v 6 h -3 v 6 h 3 v 6 h -3 v 6.000001 h 3 v 6.000001 h -3 v 5.999998 h 3 v 7.500001 h 3.5 v -2.999999 h 6 v 2.999999 h 6 v -2.999999 h 6 v 2.999999 h 3.5 v -7.500001 h 3 v -5.999998 h -3 v -6.000001 h 3 v -6.000001 h -3 v -6 h 3 v -6 h -3 v -6 h 3 v -6 h -3 v -6 h 3 v -6 h -3 v -6 h 3 v -6 h -3 v -7.5 h -3.5 v 3 h -6 v -3 h -6 v 3 h -6 v -3 z"
+       id="left_outsideCutPath"
+       stroke="#FF0000"
+       stroke-width="0.1"
+       style="font-size:12px;fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.1;stroke-linecap:round"
+       vector-effect="non-scaling-stroke" />
+  </g>
+</svg>
