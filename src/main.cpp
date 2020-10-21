@@ -1,5 +1,5 @@
 
-// PH meter @komkrit 10/2020
+// PH meter @komkrit October/2020
 // git  add  "note_xx"
 // git  commit -am "note_xx"
 
