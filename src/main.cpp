@@ -1,5 +1,5 @@
 
-// PH meter @komkrit 9/2020
+// PH meter @komkrit 10/2020
 // git  add  "note_xx"
 // git  commit -am "note_xx"
 
@@ -28,6 +28,8 @@
 
 #define ADC_EN 14 //ADC_EN is the ADC detection enable port
 #define ADC_PIN 34
+#define LED_BLUE 26
+#define LED_GREEN  27
 #define BUTTON_1 35
 #define BUTTON_2 0
 
@@ -47,7 +49,7 @@ String PH;
 float pHdata;
 String BLEStatus;
 String ADCvalue;
-String JsonBLEData;
+String JsonBLED_BLUEata;
 float A, B;
 
 BLEServer *pServer = NULL;
@@ -140,7 +142,7 @@ void updatePH()
 
   Serial.println(String(pHdata));
 
-  JsonBLEData = "";
+  JsonBLED_BLUEata = "";
   DynamicJsonDocument doc(64);
   //  doc["Batt"] = String(battery_voltage, 2);
   //  doc["ADC"]  = ADCvalue;
@@ -148,8 +150,8 @@ void updatePH()
 
   //doc["B"] = String(battery_voltage, 2);
   doc["pH"] = String(pHdata, 2);
-  serializeJson(doc, JsonBLEData);
-  Serial.println(JsonBLEData);
+  serializeJson(doc, JsonBLED_BLUEata);
+  Serial.println(JsonBLED_BLUEata);
 }
 
 void updateDisplay()
@@ -229,7 +231,7 @@ void bleSendNotify()
     //    M3value[5] = random(70, 130);
     //    pCharacteristic->setValue((uint8_t*)&M3value, 8);
 
-    pCharacteristic->setValue((char *)JsonBLEData.c_str());
+    pCharacteristic->setValue((char *)JsonBLED_BLUEata.c_str());
     pCharacteristic->notify();
     delay(10);
   }
@@ -238,6 +240,8 @@ void bleSendNotify()
 void setup()
 {
   Serial.begin(115200);
+  pinMode(LED_BLUE, OUTPUT);
+  pinMode(LED_GREEN, OUTPUT);
   tft.init();
   tft.setRotation(1);
   tft.fillScreen(TFT_BLACK);
@@ -269,6 +273,7 @@ void setup()
   Serial.println(B, 4);
   pinMode(ADC_EN, OUTPUT);
   digitalWrite(ADC_EN, HIGH);
+  //digitalWrite(LED_GREEN, HIGH);
 
   ads.setGain(GAIN_TWO); // 2x gain   +/- 2.048V  1 bit = 0.0625mV
   // ads.setGain(GAIN_FOUR);       // 4x gain   +/- 1.024V  1 bit = 0.03125mV
@@ -327,8 +332,8 @@ void setup()
   BLEDevice::startAdvertising();
 
   Serial.println("Waiting a client connection to notify...");
-  timer.setInterval(5000L, bleSendNotify);
-  timer.setInterval(3000L, updatePH);
+  timer.setInterval(3000L, bleSendNotify);
+  timer.setInterval(2000L, updatePH);
   timer.setInterval(1000L, updateDisplay);
 }
 
@@ -345,6 +350,7 @@ void loop()
     Serial.println("start advertising");
     oldDeviceConnected = deviceConnected;
     BLEStatus = "";
+    digitalWrite(LED_BLUE, LOW);
   }
   // connecting
   if (deviceConnected && !oldDeviceConnected)
@@ -352,5 +358,6 @@ void loop()
     // do stuff here on connecting
     oldDeviceConnected = deviceConnected;
     BLEStatus = "Connected";
+    digitalWrite(LED_BLUE, HIGH);
   }
 }
