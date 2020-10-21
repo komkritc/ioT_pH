@@ -70,11 +70,12 @@
        cx="36.801193"
        cy="98.241661"
        r="16.950001" />
-    <circle
-       style="fill:none;stroke:#ff0000;stroke-width:0.1"
+    <ellipse
+       style="fill:none;stroke:#ff0000;stroke-width:0.0999995"
        id="path835-7"
        cx="83.801193"
-       cy="98.241661"
-       r="22.449999" />
+       cy="98.141663"
+       rx="22.449999"
+       ry="22.35" />
   </g>
 </svg>
