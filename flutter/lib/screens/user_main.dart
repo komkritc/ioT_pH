@@ -37,6 +37,8 @@ class _UserMainState extends State<UserMain>
 
   String _bleRxData = '';
   String _pHValue = '0.00';
+  String _battery = '3.80';
+  String _batteryStatus = '';
   String _id;
   String _a;
   String _b;
@@ -62,7 +64,7 @@ class _UserMainState extends State<UserMain>
 
   loadConfig() async {
     final prefs = await SharedPreferences.getInstance();
-    _id = prefs.getString('ID') ?? 'pH-001';
+    _id = prefs.getString('ID') ?? 'pH-28452';
     _a = prefs.getString('A') ?? '-0.0226';
     _b = prefs.getString('B') ?? '7.0752';
     apikey = prefs.getString('apikey');
@@ -167,8 +169,26 @@ class _UserMainState extends State<UserMain>
 
       if (_bleRxData.contains('{')) {
         var result = json.decode(_bleRxData);
-        _pHValue = result['pH'];
+        if (result['pH'] != null) {
+          _pHValue = result['pH'];
+        }
+        if (result['Batt'] != null) {
+          _battery = result['Batt'];
+        }
+        // _pHValue = result['pH'];
+        // _battery = result['Batt'];
         print(_pHValue);
+        print(_battery);
+
+        if (double.parse(_battery) > 4.25) {
+          _batteryStatus = 'Charged';
+        }
+        if (double.parse(_battery) >= 3.7 && double.parse(_battery) <= 4.25) {
+          _batteryStatus = 'Good';
+        }
+        if (double.parse(_battery) <3.7) {
+          _batteryStatus = 'Low -> Please charge battery!!!';
+        }
       }
 
       // _bleRxData = utf8.decode(value);
@@ -425,6 +445,14 @@ class _UserMainState extends State<UserMain>
                   textColor: Colors.white,
                 ),
               ],
+            ),
+            Text(
+              ' Battery: $_batteryStatus',
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 10.0,
+                fontWeight: FontWeight.normal,
+              ),
             ),
             SizedBox(height: screenHeight * 0.01),
             Column(

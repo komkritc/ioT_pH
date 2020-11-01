@@ -68,7 +68,7 @@ Widget wissava() {
         child: Text('นายวิศวะ กุลนะ', textAlign: TextAlign.left),
       ),
       Expanded(
-        child: Text('Project Manager', textAlign: TextAlign.right),
+        child: Text('Ideas & Experiments', textAlign: TextAlign.right),
       ),
     ],
   );

@@ -4,6 +4,7 @@ import 'package:flutter_blue/flutter_blue.dart';
 
 Color insightOrange = Color(0xffeb6011);
 
+// {"ID":"pH-28452","apikey":"dZs11hNvVA41o3RDzjA4yQ","A":"-0.0226","B":"7.0752"}
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Easy pH Datalogger',
+      title: 'IoT pH Meter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,

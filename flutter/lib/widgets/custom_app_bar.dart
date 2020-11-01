@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_covid_dashboard_ui/config/palette.dart';
-import 'package:flutter_covid_dashboard_ui/screens/screens.dart';
 import 'package:android_intent/android_intent.dart';
 //import '../screens/user_main.dart';
 
