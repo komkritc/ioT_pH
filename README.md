@@ -3,6 +3,8 @@
 
 qr code  => {"ID":"pH-20420","apikey":"dZs11hNvVA41o3RDzjA4yQ","A":"-0.0226","B":"7.0752"}
 
+[qr code generator](https://th.qr-code-generator.com/)
+
 ## Download
 available from [ioT pH Meter Android v1.0](https://github.com/komkritc/ioT_pH/blob/master/flutter/apk/app_ph.apk)
 
