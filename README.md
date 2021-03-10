@@ -1,7 +1,7 @@
 * We developed the ioT pH meter from commercial pH meter and we modified this to be able to record pH data along with geolocation and upload to Google sheet.
 ![ph_diagram](/images/ph_diagram_.png)
 
-qr code  => {"ID":"pH-20420","apikey":"dZs11hNvVA41o3RDzjA4yQ","A":"-0.0226","B":"7.0752"}
+qr code  => {"ID":"pH-20420","apikey":"ePuodtfD5jv1_jkeC5GsVZStkUICVaaGgzwmkAtrK6x","A":"-0.0226","B":"7.0752"}
 
 [qr code generator](https://th.qr-code-generator.com/)
 
